@@ -1,0 +1,28 @@
+<div class="ui labeled icon menu small">
+  <div class="ui container">
+    <a class="item">
+      <i class="wechat icon"></i>
+      Message Room
+    </a>
+    <a class="item">
+      <i class="envelope outline icon"></i>
+      Messages
+    </a>
+  <div class="ui right menu">
+<!--    <div class="ui simple dropdown item">-->
+<!--      Dropdown-->
+<!--      <i class="dropdown icon"></i>-->
+<!--      <div class="menu">-->
+<!--        <div class="item">Choice 1</div>-->
+<!--        <div class="item">Choice 2</div>-->
+<!--        <div class="item">Choice 3</div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <% if current_user %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'ui right floated button' %>
+    <% else %>
+      <%= link_to 'Login', user_session_path, class: 'ui right floated primary button' %>
+    <% end %>
+  </div>
+  </div>
+</div>
