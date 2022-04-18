@@ -1,7 +1,7 @@
 <h1>Hello</h1>
 
-<% unless current_user %>
-  <%= link_to 'Logout', destroy_user_session_path(current_user), method: :delete %>
+<% if current_user %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Login', user_session_path %>
 <% end %>
