@@ -1,5 +1,5 @@
 <div class="eleven wide column">
-  <div class="ui raised segment wrapper">
+  <div class="ui raised segment wrapper" id="scroll">
     <div class="ui comments" id="chatbox">
       <h3 class="ui dividing header">Chat!</h3>
       <%# if @messages.present? %>
@@ -9,8 +9,8 @@
       <%# end %>
       <%= render @messages %>
     </div>
-    <div class="ui bottom raised segment-wrapper">
-      <%= render 'messages/form', message: @message %>
-    </div>
+  </div>
+  <div class="ui bottom raised segment-wrapper">
+    <%= render 'messages/form', message: @message %>
   </div>
 </div>

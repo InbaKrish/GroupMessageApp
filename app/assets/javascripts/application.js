@@ -16,3 +16,13 @@
 //= require turbolinks
 //= require semantic-ui
 //= require_tree .
+
+auto_scroll = function () {
+    if($('#chatbox').length > 0){
+        $('#scroll').scrollTop($('#scroll')[0].scrollHeight);
+    }
+}
+
+$(document).on('turbolinks:load', () => {
+    auto_scroll()
+})
