@@ -6,10 +6,11 @@ class MessagesController < ApplicationController
     message.save
     if message.errors.any?
       flash[:alert] = message.errors.full_messages.to_sentence
+      redirect_to root_path
     else
-      flash[:notice] = "Message Posted Successfully!"
+      # flash[:notice] = "Message Posted Successfully!"
+      ActionCable.server.broadcast 'chatroom_channel', message_html: render(partial: 'message', locals: {message: message}), notice: "Message Posted Successfully!"
     end
-    redirect_to root_path
   end
 
   private
