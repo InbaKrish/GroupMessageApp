@@ -19,7 +19,7 @@
 <!--      </div>-->
 <!--    </div>-->
     <% if current_user %>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'ui right floated button' %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'ui right floated negative button' %>
     <% else %>
       <%= link_to 'Login', user_session_path, class: 'ui right floated primary button' %>
     <% end %>

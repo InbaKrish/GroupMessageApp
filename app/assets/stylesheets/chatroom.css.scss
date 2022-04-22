@@ -2,3 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'semantic-ui';
+
+.wrapper{
+  height:95%;
+}
+
+.segment-wrapper {
+  background-color: #DDD;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  width: 96%;
+}
