@@ -1,0 +1,14 @@
+<div class="comment">
+  <a class="avatar">
+    <%= image_tag "/assets/mk1.png" %>
+  </a>
+  <div class="content">
+    <a class="author"><%= message.user.email %></a>
+    <div class="metadata">
+      <span class="date">Today at <%= message.created_at.localtime.strftime("%I:%M %p") %></span>
+    </div>
+    <div class="text">
+      <%= message.body %>
+    </div>
+  </div>
+</div>

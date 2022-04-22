@@ -1,15 +1,10 @@
 <% if notice %>
-  <div class="ui message">
-    <i class="close icon"></i>
-    <div class="header">
-      Message!
-    </div>
+  <div class="ui success message">
   <p class="alert alert-success"><%= notice %></p>
   </div>
 <% end %>
 <% if alert %>
-  <div class="ui message negative">
-    <i class="close icon"></i>
+  <div class="ui error message">
     <div class="header">
       Error!
     </div>
@@ -18,16 +13,8 @@
 <% end %>
 
 <script>
-    $('.message .close')
-        .on('click', function() {
-            $(this)
-                .closest('.message')
-                .transition('fade')
-            ;
-        })
-    ;
     setTimeout(function () {
-        $('.message .close')
+        $('.alert')
             .closest('.message')
             .transition('fade')
         ;
