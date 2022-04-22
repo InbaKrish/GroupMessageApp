@@ -1,6 +1,8 @@
+<%# avatar = current_user == message.user && session[:prof_pic].present? ? "/assets/mk#{session[:prof_pic]}" : "/assets/mk#{get_uniq_pic_id}" %>
+<% avatar = "/assets/mk#{message.user.pic_id}" %>
 <div class="comment">
   <a class="avatar">
-    <%= image_tag "/assets/mk1.png" %>
+    <%= image_tag avatar %>
   </a>
   <div class="content">
     <a class="author"><%= message.user.email %></a>
