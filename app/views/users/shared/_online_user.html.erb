@@ -1,0 +1,7 @@
+<% avatar = "/assets/mk#{user.pic_id}" %>
+<div class="item" id="<%= "user_#{user.id}" %>">
+  <%= image_tag avatar, class: "ui avatar image" %>
+  <div class="content">
+    <h3 class="header"><%= user.username %></h3>
+  </div>
+</div>

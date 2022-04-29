@@ -6,4 +6,7 @@ module ApplicationHelper
       break number unless session[:prof_pic] == number
     end
   end
+  def format_message(text)
+    Kramdown::Document.new(text).to_html
+  end
 end

@@ -1,4 +1,9 @@
 <div class="five wide column">
   <div class="ui raised segment wrapper">
+    <h2>Online Users</h2>
+    <hr>
+    <div class="ui list" id="online_users">
+      <%= render partial: 'users/shared/online_user', collection: User.online, as: :user %>
+    </div>
   </div>
 </div>
