@@ -23,6 +23,6 @@ auto_scroll = function () {
     }
 }
 
-$(document).on('turbolinks:load', () => {
+$(document).on('turbolinks:load', function () {
     auto_scroll()
 })
